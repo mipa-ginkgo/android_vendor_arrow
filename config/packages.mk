@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LatinIME \
     messaging \
+    Seedvault \
     SimpleGallery \
     Stk \
     ThemePicker
