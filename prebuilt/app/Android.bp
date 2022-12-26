@@ -1,0 +1,8 @@
+android_app_import {
+        name: "Camera",
+        apk: "GrapheneCamera/Camera.apk",
+        presigned: true,
+        product_specific: true,
+        overrides: ["Camera2"],
+        optional_uses_libs: ["androidx.camera.extensions.impl"]
+}
