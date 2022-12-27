@@ -20,12 +20,25 @@ PRODUCT_PACKAGES += \
     DuckDuckGo \
     ExactCalculator \
     LatinIME \
-    Launcher3QuickStep \
     messaging \
     SimpleGallery \
     Stk \
     ThemePicker \
     ArrowThemesStub
+
+ifeq ($(PRODUCT_TYPE), go)
+PRODUCT_PACKAGES += \
+    ArrowLauncherGo
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    ArrowLauncherGo
+else
+PRODUCT_PACKAGES += \
+    ArrowLauncher
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    ArrowLauncher
+endif
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
