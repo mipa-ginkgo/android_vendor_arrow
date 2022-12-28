@@ -23,8 +23,7 @@ PRODUCT_PACKAGES += \
     messaging \
     SimpleGallery \
     Stk \
-    ThemePicker \
-    ArrowThemesStub
+    ThemePicker
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
