@@ -14,7 +14,7 @@
 # limitations under the License.
 
 ARROW_MOD_VERSION = v13.0
-ARROW_BUILD_TYPE := MiPa
+ARROW_BUILD_TYPE := UNOFFICIAL
 ARROW_BUILD_ZIP_TYPE := VANILLA
 
 ifeq ($(ARROW_BETA),true)
@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
 
     endif
     ifneq ($(IS_OFFICIAL), true)
-       ARROW_BUILD_TYPE := MiPa
+       ARROW_BUILD_TYPE := UNOFFICIAL
        $(error Device is not official "$(CURRENT_DEVICE)")
     endif
 endif
@@ -51,9 +51,16 @@ ifeq ($(ARROW_COMMUNITY), true)
       ARROW_BUILD_TYPE := COMMUNITY
     endif
     ifneq ($(IS_COMMUNITY), true)
-       ARROW_BUILD_TYPE := MiPa
+       ARROW_BUILD_TYPE := UNOFFICIAL
        $(error This isn't a community device "$(CURRENT_DEVICE)")
     endif
+endif
+
+ifeq ($(ARROW_MIPA), true)
+    ARROW_BUILD_TYPE := MiPa
+
+PRODUCT_PACKAGES += \
+    Updater
 endif
 
 ARROW_VERSION := Arrow-$(ARROW_MOD_VERSION)-$(CURRENT_DEVICE)-$(ARROW_BUILD_TYPE)-$(shell date -u +%Y%m%d)-$(ARROW_BUILD_ZIP_TYPE)
