@@ -80,9 +80,27 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     sys.fflag.override.settings_volume_panel_in_systemui=true
 
-# Spoof fingerprint for Google Play Services and SafetyNet
+# Spoof props for Google Play Services and SafetyNet
 ifeq ($(PRODUCT_OVERRIDE_GMS_FINGERPRINT),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
 else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=$(PRODUCT_OVERRIDE_GMS_FINGERPRINT)
+endif
+
+ifeq ($(PRODUCT_OVERRIDE_GMS_PRODUCT),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_product=walleye
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_product=$(PRODUCT_OVERRIDE_GMS_PRODUCT)
+endif
+
+ifeq ($(PRODUCT_OVERRIDE_GMS_DEVICE),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_device=walleye
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_device=$(PRODUCT_OVERRIDE_GMS_DEVICE)
+endif
+
+ifeq ($(PRODUCT_OVERRIDE_GMS_MODEL),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_model=Pixel 2
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_model=$(PRODUCT_OVERRIDE_GMS_MODEL)
 endif
