@@ -169,17 +169,6 @@
     <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
     <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
 
-    <!-- Build properties from a GMS certified device against current platform SPL level -->
-    <string-array name="config_certifiedBuildProperties" translatable="false">
-        <item>ferrari</item>   <!-- Build.DEVICE -->
-        <item>ferrari</item>   <!-- Build.PRODUCT -->
-        <item>Mi 4i</item> <!-- Build.MODEL -->
-        <item>Xiaomi/ferrari/ferrari:5.0.2/LRX22G/V6.4.10.0.LXIMICB:user/release-keys</item> <!-- Build.FINGERPRINT -->
-        <item>Xiaomi</item>   <!-- Build.BRAND -->
-        <item>Xiaomi</item>   <!-- Build.MANUFACTURER -->
-        <item>2019-08-05</item>   <!-- Build.SECURITY_PATCH -->
-    </string-array>
-
     <!-- Name of the font family to use in the default lockscreen clock -->
     <string name="config_clockFontFamily" translatable="false" />
 
