@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
