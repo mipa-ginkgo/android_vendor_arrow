@@ -39,10 +39,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.sip.voip.xml
 
-# GameSpace
-PRODUCT_PACKAGES += \
-    GameSpace
-
 # init file
 PRODUCT_COPY_FILES += \
     vendor/arrow/prebuilt/common/etc/init/init.arrow-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.arrow-system_ext.rc \
