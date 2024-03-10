@@ -57,7 +57,7 @@ ifeq ($(ARROW_COMMUNITY), true)
 endif
 
 ifeq ($(ARROW_MIPA), true)
-    ARROW_BUILD_TYPE := MiPa-Mod-v1.0
+    ARROW_BUILD_TYPE := MiPa-Mod-v1.1
 
 PRODUCT_PACKAGES += \
     Updater
