@@ -31,7 +31,6 @@ endif
 PRODUCT_PACKAGES += \
     BluetoothExt \
     SimpleCalendar \
-    DuckDuckGo \
     ExactCalculator \
     LatinIME \
     ParallelSpace \
